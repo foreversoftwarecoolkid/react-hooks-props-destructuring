@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function MovieCard({
   title,
@@ -13,5 +14,11 @@ function MovieCard({
     </div>
   );
 }
+
+MovieCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  posterSrc: PropTypes.string,
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default MovieCard;
